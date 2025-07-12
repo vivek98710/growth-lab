@@ -1,0 +1,117 @@
+/* === Base layout === */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 20px;
+  color: #111;
+}
+
+.hidden {
+  display: none;
+}
+
+.card,
+.container {
+  max-width: 620px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth inputs */
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Form fields */
+textarea,
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  background: #4ade80;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #22c55e;
+}
+
+/* Sections */
+#stats,
+#history {
+  max-width: 620px;
+  margin: 40px auto 0;
+}
+
+#history {
+  margin-bottom: 60px;
+}
+
+/* History entries */
+.entry {
+  background: #f9fafb;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.entry.completed {
+  border-left: 8px solid #22c55e;
+}
+
+.small-btn,
+.toggleBadge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.small-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.small-btn:hover {
+  background: #cbd5e1;
+}
+
+.toggleBadge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.entry.completed .toggleBadge {
+  background: #dcfce7;
+  color: #15803d;
+}
