@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth Lab 🧠</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Chart.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- 🔐 Auth box -->
+  <div id="authBox" class="card">
+    <h2>Welcome to Growth Lab 🚀</h2>
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="emailSignUp">Sign Up</button>
+    <button id="emailLogin">Login</button>
+    <button id="googleLogin">Login with Google</button>
+    <p id="authMsg"></p>
+  </div>
+
+  <!-- 🌱 Main app -->
+  <div id="app" class="hidden">
+    <div class="container">
+      <h1>🚀 My Daily Growth Lab</h1>
+
+      <textarea id="learning" placeholder="📝 What did I learn today?"></textarea>
+      <textarea id="reflection" placeholder="🤖 How did I upgrade today?"></textarea>
+      <input id="task" placeholder="✅ My task for tomorrow" />
+      <button id="saveBtn">💾 Save My Day</button>
+      <button id="summaryBtn">🤖 Weekly AI Summary</button>
+      <p id="confirmation"></p>
+    </div>
+
+    <!-- 📊 Progress -->
+    <section id="stats">
+      <h2>📊 Weekly Progress</h2>
+      <canvas id="progressChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- 📚 History -->
+    <section id="history">
+      <h2>📚 Past Entries</h2>
+      <div id="entriesList"></div>
+    </section>
+
+    <button id="logout">Log out</button>
+  </div>
+
+  <!-- Logic -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
